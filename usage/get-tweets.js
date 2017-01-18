@@ -29,9 +29,12 @@ new TwitterCrawler ({
 
 }).getTweets ({ hashtags: ['custserv']/*, retweetCount: {$gt: 0}*/ }).then ((response) => {
 
-	//console.log ('Got a response!\n\n' + JSON.stringify (response, null, 2));
-	console.log (response.statuses.length + '\n\n')
-	console.log (JSON.stringify (response.statuses [0], null, 2))
+	const tweetCount = response.statuses.length;
+
+	console.log (`Retrieved a total of ${tweetCount} tweets.`);
+	response.statuses.forEach ((status) => {
+		console.log (status.text + ' by ' + status.user.name);
+	});
 
 }).catch ((error) => {
 	console.err (

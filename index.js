@@ -38,11 +38,24 @@ class TwitterCrawler {
 		return new Error ('Initialization failed: Invalid credentials object');
 	}
 
+	static get _tweetCountPerCall () { return 100; }
 	static get _pathSearchTweets () { return 'search/tweets'; }
 
 
 	_constructParams (criteria) {
-		return { q: '#custserv', count: 100 }; /***************************/
+		if (criteria.hashtags) {
+			const q = criteria.hashtags.reduce ((queryString, currentTag) => {
+				if (currentTag [0] !== '#') {
+					currentTag = '#' + currentTag;
+				}
+
+				return queryString ? (queryString + ' OR ' + currentTag) : currentTag;
+			}, '');
+
+			return { q, count: TwitterCrawler._tweetCountPerCall };
+		}
+
+		return { count: TwitterCrawler._tweetCountPerCall };
 	}
 
 	_responseRequiresSecondaryFiltering (criteria) {
