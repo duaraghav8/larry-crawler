@@ -1,20 +1,6 @@
 'use strict';
 
 const Twitter = require ('twitter');
-const client = new Twitter ({
-	consumer_key: process.env.TWITTER_CONSUMER_KEY,
-	consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-	bearer_token: process.env.TWITTER_BEARER_TOKEN
-});
-
-const params = {
-	q: '#custserv'
-};
-
-client.get (path, params);
-
-///////////////////////////////////////////////////////
-const Twitter = require ('twitter');
 
 class TwitterCrawler {
 
@@ -79,28 +65,4 @@ class TwitterCrawler {
 
 }
 
-///////////////////////////////////////////////////////
-
-const TwitterCrawler = require ('twitter-crawler');
-
-new TwitterCrawler ({
-
-	consumerKey: process.env.TWITTER_CONSUMER_KEY,
-	consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
-	bearerToken: process.env.TWITTER_BEARER_TOKEN
-
-}).getTweetsAsStream ({ hashtags: ['custserv'], retweetCount: {$gt: 0} }).then ((stream) => {
-
-	stream.on ('data', (event) => {
-		console.log (event && event.text);	
-	});
-
-	stream.on ('error', (event) => {
-		throw error;
-	});
-
-}).catch ((error) => {
-	console.err (
-		'An error occured while fetching the tweets:\n\n' + JSON.stringify (error, null, 2)
-	);
-});
+module.exports = TwitterCrawler;
