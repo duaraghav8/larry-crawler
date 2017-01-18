@@ -5,62 +5,69 @@ const Twitter = require ('twitter');
 class TwitterCrawler {
 
 	constructor (credentials) {
-		if (!credentials || credentials.constructor.name !== 'Object') {
-			throw exceptInvalidCredentials ();
+		if (
+			!credentials || credentials.constructor.name !== 'Object' ||
+			!(typeof credentials.consumerKey === 'string' && typeof credentials.consumerSecret === 'string')
+		) {
+			throw TwitterCrawler._exceptInvalidCredentials ();
 		}
 
-		this.twitterBot = {
+		const twitterBotCredentials = {
 			consumer_key: credentials.consumerKey, consumer_secret: credentials.consumerSecret
 		};
 
 		if (credentials.bearerToken) {
-			twitterBot.bearer_token = credentials.bearerToken;
+			twitterBotCredentials.bearer_token = credentials.bearerToken;
 		} else if (credentials.accessTokenKey && credentials.accessTokenSecret) {
-			twitterBot. = credentials.accessTokenKey;
-			twitterBot. = credentials.accessTokenSecret;
+
+			twitterBotCredentials.access_token_key = credentials.accessTokenKey;
+			twitterBotCredentials.access_token_secret = credentials.accessTokenSecret;
+
 		} else {
 			throw exceptInvalidCredentials ();
 		}
+
+		this.twitterBot = new Twitter (twitterBotCredentials);
 	}
 
 
-	private static get exceptInvalidCredentials () {
+	/**
+	 * Private methods
+	 */
+	static _exceptInvalidCredentials () {
 		return new Error ('Initialization failed: Invalid credentials object');
 	}
 
-	private static get pathSearchTweets () { return 'search/tweets'; }
+	static get _pathSearchTweets () { return 'search/tweets'; }
 
 
-	private constructParams (criteria) {
+	_constructParams (criteria) {
+		return { q: '#custserv', count: 100 }; /***************************/
 	}
 
-	private responseRequiresSecondaryFiltering (criteria) {
+	_responseRequiresSecondaryFiltering (criteria) {
 		return (
 			criteria.retweetCount && criteria.retweetCount.constructor.name === 'Object' &&
 			Object.keys (criteria.retweetCount).length > 0
 		);
 	}
 
-	getTweetsAsStream (criteria) {
-		return getTweets (criteria, true);
-	}
 
-	getTweets (criteria, returnStreamObject) {
-		function fetchResponse () {
-			return this.twitterBot [returnStreamObject ? 'stream' : 'get'] (
-				pathSearchTweets, constructParams (criteria)
-			);
-		}	
-			
+	/**
+	 * Public methods
+	 */
+	getTweets (criteria) {			
 		if (criteria && criteria.constructor.name !== 'Object') {
 			throw new Error ('Query failed: Invalid criteria object');
 		}
 
-		if (responseRequiresSecondaryFiltering (criteria)) {
-			return new Filter (fetchResponse (), criteria);
+		if (this._responseRequiresSecondaryFiltering (criteria)) {
+			return new Filter (
+				this.twitterBot.get (TwitterCrawler._pathSearchTweets, this._constructParams (criteria)), criteria
+			);
 		}
 		
-		return fetchResponse ();
+		return this.twitterBot.get (TwitterCrawler._pathSearchTweets, this._constructParams (criteria));
 	}
 
 }

@@ -1,0 +1,124 @@
+100
+
+
+{
+  "created_at": "Wed Jan 18 14:30:27 +0000 2017",
+  "id": 821726450164387800,
+  "id_str": "821726450164387840",
+  "text": "Call center quality assurance – 15 best practices to boost customer service https://t.co/rs3qzXWI2r #custserv… https://t.co/7EjGP6avmE",
+  "truncated": true,
+  "entities": {
+    "hashtags": [
+      {
+        "text": "custserv",
+        "indices": [
+          100,
+          109
+        ]
+      }
+    ],
+    "symbols": [],
+    "user_mentions": [],
+    "urls": [
+      {
+        "url": "https://t.co/rs3qzXWI2r",
+        "expanded_url": "http://buff.ly/2e1sPK5",
+        "display_url": "buff.ly/2e1sPK5",
+        "indices": [
+          76,
+          99
+        ]
+      },
+      {
+        "url": "https://t.co/7EjGP6avmE",
+        "expanded_url": "https://twitter.com/i/web/status/821726450164387840",
+        "display_url": "twitter.com/i/web/status/8…",
+        "indices": [
+          111,
+          134
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "iso_language_code": "en",
+    "result_type": "recent"
+  },
+  "source": "<a href=\"http://bufferapp.com\" rel=\"nofollow\">Buffer</a>",
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": null,
+  "in_reply_to_user_id_str": null,
+  "in_reply_to_screen_name": null,
+  "user": {
+    "id": 186401696,
+    "id_str": "186401696",
+    "name": "Miruna Mitranescu⚡️",
+    "screen_name": "anamiruna",
+    "location": "Paris",
+    "description": "Head of Content Marketing @Aircall - ex @Lewagonparis, @TastersClub, @RudeBaguette #philosophy lover",
+    "url": "https://t.co/W6AVuXqHdH",
+    "entities": {
+      "url": {
+        "urls": [
+          {
+            "url": "https://t.co/W6AVuXqHdH",
+            "expanded_url": "http://bit.ly/appaircall",
+            "display_url": "bit.ly/appaircall",
+            "indices": [
+              0,
+              23
+            ]
+          }
+        ]
+      },
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 769,
+    "friends_count": 984,
+    "listed_count": 261,
+    "created_at": "Fri Sep 03 11:02:00 +0000 2010",
+    "favourites_count": 1293,
+    "utc_offset": 7200,
+    "time_zone": "Athens",
+    "geo_enabled": true,
+    "verified": false,
+    "statuses_count": 1983,
+    "lang": "fr",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "C0DEED",
+    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/509576187/moi.jpg",
+    "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/509576187/moi.jpg",
+    "profile_background_tile": true,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/2528774844/coukofqcjj8ogep7ey3d_normal.jpeg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2528774844/coukofqcjj8ogep7ey3d_normal.jpeg",
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "C0DEED",
+    "profile_sidebar_fill_color": "DDEEF6",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": false,
+    "follow_request_sent": false,
+    "notifications": false,
+    "translator_type": "none"
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": null,
+  "contributors": null,
+  "is_quote_status": false,
+  "retweet_count": 0,
+  "favorite_count": 0,
+  "favorited": false,
+  "retweeted": false,
+  "possibly_sensitive": false,
+  "lang": "en"
+}

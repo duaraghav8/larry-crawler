@@ -13,9 +13,10 @@
 const TwitterCrawler = require ('../index');
 
 const defaults = {
-	twitterConsumerKey: '',
-	twitterConsumerSecret: '',
-	twitterBearerToken: ''
+	twitterConsumerKey: 'nWijRASOdKeA3OR8w0gIixZih',
+	twitterConsumerSecret: 'zgXA6nt7g1sd4r5qW3Ro1lM5z5iMF5IRJknoQDOSxGHvKqLEt5',
+	twitterAccessTokenKey: '2539232378-eGkz2Y7ZEoGMLxq32QBzsrTKaxAFCNX0i0C0SoG',
+	twitterAccessTokenSecret: 'bzJZhXrGTbAHf6gxz190jf1Sl7MywXYKs5uZQinzRatWY'
 };
 
 
@@ -23,17 +24,14 @@ new TwitterCrawler ({
 
 	consumerKey: process.env.TWITTER_CONSUMER_KEY || defaults.twitterConsumerKey,
 	consumerSecret: process.env.TWITTER_CONSUMER_SECRET || defaults.twitterConsumerSecret,
-	bearerToken: process.env.TWITTER_BEARER_TOKEN || defaults.twitterBearerToken
+	accessTokenKey: process.env.TWITTER_ACCESS_TOKEN_KEY || defaults.twitterAccessTokenKey,
+	accessTokenSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET || defaults.twitterAccessTokenSecret
 
-}).getTweetsAsStream ({ hashtags: ['custserv'], retweetCount: {$gt: 0} }).then ((stream) => {
+}).getTweets ({ hashtags: ['custserv']/*, retweetCount: {$gt: 0}*/ }).then ((response) => {
 
-	stream.on ('data', (event) => {
-		console.log (event && event.text);	
-	});
-
-	stream.on ('error', (event) => {
-		throw error;
-	});
+	//console.log ('Got a response!\n\n' + JSON.stringify (response, null, 2));
+	console.log (response.statuses.length + '\n\n')
+	console.log (JSON.stringify (response.statuses [0], null, 2))
 
 }).catch ((error) => {
 	console.err (
