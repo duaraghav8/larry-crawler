@@ -1,0 +1,25 @@
+{
+  "name": "larry-crawler",
+  "version": "0.0.0",
+  "description": "A simple yet flexible Twitter Crawler for Kayako Twitter Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duaraghav8/larry-crawler.git"
+  },
+  "keywords": [
+    "Twitter",
+    "Web",
+    "Scrawling",
+    "Kayako"
+  ],
+  "author": "Raghav Dua <duaraghav8@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/duaraghav8/larry-crawler/issues"
+  },
+  "homepage": "https://github.com/duaraghav8/larry-crawler#readme"
+}
