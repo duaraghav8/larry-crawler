@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/duaraghav8/larry-crawler/issues"
   },
-  "homepage": "https://github.com/duaraghav8/larry-crawler#readme"
+  "homepage": "https://github.com/duaraghav8/larry-crawler#readme",
+  "dependencies": {
+    "twitter": "^1.7.0"
+  }
 }
