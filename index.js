@@ -1,6 +1,6 @@
 'use strict';
 
-const Twitter = require ('twitter');
+const Twitter = require ('twitter'), SecondaryFilter = require ('./secondary-filter');
 
 class TwitterCrawler {
 
@@ -93,11 +93,13 @@ class TwitterCrawler {
 		}
 
 		if (this._responseRequiresSecondaryFiltering (criteria)) {
-			return new Filter (
+
+			return new SecondaryFilterForTweets (
 				this.twitterBot.get (
 					TwitterCrawler.PATH_SEARCH_TWEETS, this._constructParams (criteria, criteria.maxId)
 				), criteria
-			);
+			).filter ();
+			
 		}
 		
 		return this.twitterBot.get (
