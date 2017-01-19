@@ -31,31 +31,31 @@ class TwitterCrawler {
 	}
 
 
-	/**
-	 * Private methods
-	 */
+
+	// Exceptions
 	static _exceptInvalidCredentials () {
 		return new Error ('Initialization failed: Invalid credentials object');
 	}
+	static _exceptInvalidCriteria () {
+		reuturn new Error ('Query failed: Invalid criteria object');
+	}
 
-	static get _tweetCountPerCall () { return 100; }
-	static get _pathSearchTweets () { return 'search/tweets'; }
+	// Static Constants
+	static get TWEET_COUNT_PER_CALL () { return 11; } /*****************************/
+	static get PATH_SEARCH_TWEETS () { return 'search/tweets'; }
 
 
+	// Private Methods
 	_constructParams (criteria) {
 		if (criteria.hashtags) {
 			const q = criteria.hashtags.reduce ((queryString, currentTag) => {
-				if (currentTag [0] !== '#') {
-					currentTag = '#' + currentTag;
-				}
-
 				return queryString ? (queryString + ' OR ' + currentTag) : currentTag;
 			}, '');
 
-			return { q, count: TwitterCrawler._tweetCountPerCall };
+			return { q, count: TwitterCrawler.TWEET_COUNT_PER_CALL, max_id: criteria.maxId };
 		}
 
-		return { count: TwitterCrawler._tweetCountPerCall };
+		throw _exceptInvalidCriteria ();
 	}
 
 	_responseRequiresSecondaryFiltering (criteria) {
@@ -69,18 +69,18 @@ class TwitterCrawler {
 	/**
 	 * Public methods
 	 */
-	getTweets (criteria) {			
-		if (criteria && criteria.constructor.name !== 'Object') {
-			throw new Error ('Query failed: Invalid criteria object');
+	getTweets (criteria) {
+		if (!criteria || criteria.constructor.name !== 'Object' || !Object.keys (criteria).length) {
+			throw _exceptInvalidCriteria ();
 		}
 
 		if (this._responseRequiresSecondaryFiltering (criteria)) {
 			return new Filter (
-				this.twitterBot.get (TwitterCrawler._pathSearchTweets, this._constructParams (criteria)), criteria
+				this.twitterBot.get (TwitterCrawler.PATH_SEARCH_TWEETS, this._constructParams (criteria)), criteria
 			);
 		}
 		
-		return this.twitterBot.get (TwitterCrawler._pathSearchTweets, this._constructParams (criteria));
+		return this.twitterBot.get (TwitterCrawler.PATH_SEARCH_TWEETS, this._constructParams (criteria));
 	}
 
 }
