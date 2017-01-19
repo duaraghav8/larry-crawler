@@ -24,7 +24,7 @@ class TwitterCrawler {
 			twitterBotCredentials.access_token_secret = credentials.accessTokenSecret;
 
 		} else {
-			throw exceptInvalidCredentials ();
+			throw TwitterCrawler._exceptInvalidCredentials ();
 		}
 
 		this.twitterBot = new Twitter (twitterBotCredentials);
@@ -38,6 +38,9 @@ class TwitterCrawler {
 	}
 	static _exceptInvalidCriteria () {
 		return new Error ('Query failed: Invalid criteria object');
+	}
+	static _exceptInvalidMaxId () {
+		return new Error ('Invalid maxId field in criteria, must be a 64-bit Integer');
 	}
 
 	// Static Constants
@@ -59,13 +62,17 @@ class TwitterCrawler {
 			const params = { q, count: TwitterCrawler.TWEET_COUNT_PER_CALL };
 
 			if (maxId) {
+				if (maxId.constructor.name !== 'Number') {
+					throw TwitterCrawler._exceptInvalidMaxId ();
+				}
+
 				params.max_id = maxId;
 			}
 
 			return params;
 		}
 
-		throw _exceptInvalidCriteria ();
+		throw TwitterCrawler._exceptInvalidCriteria ();
 	}
 
 	_responseRequiresSecondaryFiltering (criteria) {
@@ -82,7 +89,7 @@ class TwitterCrawler {
 	 */
 	getTweets (criteria) {
 		if (!criteria || criteria.constructor.name !== 'Object' || !Object.keys (criteria).length) {
-			throw _exceptInvalidCriteria ();
+			throw TwitterCrawler._exceptInvalidCriteria ();
 		}
 
 		if (this._responseRequiresSecondaryFiltering (criteria)) {
@@ -94,7 +101,7 @@ class TwitterCrawler {
 		}
 		
 		return this.twitterBot.get (
-			TwitterCrawler.PATH_SEARCH_TWEETS, this._constructParams (criteria, , criteria.maxId)
+			TwitterCrawler.PATH_SEARCH_TWEETS, this._constructParams (criteria, criteria.maxId)
 		);
 	}
 
