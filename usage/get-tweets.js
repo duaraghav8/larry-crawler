@@ -27,7 +27,7 @@ new TwitterCrawler ({
 	accessTokenKey: process.env.TWITTER_ACCESS_TOKEN_KEY || defaults.twitterAccessTokenKey,
 	accessTokenSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET || defaults.twitterAccessTokenSecret
 
-}).getTweets ({ hashtags: ['#custserv','#chatbots']/*, retweetCount: {$gt: 0}*/ }).then ((response) => {
+}).getTweets ({ hashtags: ['#custserv']/*, retweetCount: {$gt: 0}*/ }).then ((response) => {
 	const tweetCount = response.statuses.length;
 
 	console.log (`Retrieved a total of ${tweetCount} tweets.`);

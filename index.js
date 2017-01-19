@@ -37,7 +37,7 @@ class TwitterCrawler {
 		return new Error ('Initialization failed: Invalid credentials object');
 	}
 	static _exceptInvalidCriteria () {
-		reuturn new Error ('Query failed: Invalid criteria object');
+		return new Error ('Query failed: Invalid criteria object');
 	}
 
 	// Static Constants
@@ -46,13 +46,23 @@ class TwitterCrawler {
 
 
 	// Private Methods
-	_constructParams (criteria) {
+	_constructParams (criteria, maxId) {
 		if (criteria.hashtags) {
 			const q = criteria.hashtags.reduce ((queryString, currentTag) => {
+				if (currentTag [0] != '#') {
+					currentTag = '#' + currentTag;
+				}
+
 				return queryString ? (queryString + ' OR ' + currentTag) : currentTag;
 			}, '');
 
-			return { q, count: TwitterCrawler.TWEET_COUNT_PER_CALL, max_id: criteria.maxId };
+			const params = { q, count: TwitterCrawler.TWEET_COUNT_PER_CALL };
+
+			if (maxId) {
+				params.max_id = maxId;
+			}
+
+			return params;
 		}
 
 		throw _exceptInvalidCriteria ();
@@ -66,6 +76,7 @@ class TwitterCrawler {
 	}
 
 
+
 	/**
 	 * Public methods
 	 */
@@ -76,11 +87,15 @@ class TwitterCrawler {
 
 		if (this._responseRequiresSecondaryFiltering (criteria)) {
 			return new Filter (
-				this.twitterBot.get (TwitterCrawler.PATH_SEARCH_TWEETS, this._constructParams (criteria)), criteria
+				this.twitterBot.get (
+					TwitterCrawler.PATH_SEARCH_TWEETS, this._constructParams (criteria, criteria.maxId)
+				), criteria
 			);
 		}
 		
-		return this.twitterBot.get (TwitterCrawler.PATH_SEARCH_TWEETS, this._constructParams (criteria));
+		return this.twitterBot.get (
+			TwitterCrawler.PATH_SEARCH_TWEETS, this._constructParams (criteria, , criteria.maxId)
+		);
 	}
 
 }
