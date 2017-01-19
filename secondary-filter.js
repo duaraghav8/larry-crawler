@@ -9,10 +9,18 @@ class SecondaryFilterForTweets {
 	
 		this._filterByRetweetCount = {
 			
-			$gt: (apiResponse, operand) {
-				apiResponse.statuses.filter ((status) => {
+			$gt: (apiResponse, operand) => {
+				const res = {};
+
+				if (typeof operand !== 'number') {
+					throw new Error ('Invalid operand type for $gt clause in retweetCount field');
+				}
+
+				res.statuses = apiResponse.statuses.filter ((status) => {
 					return status.retweet_count > operand;
 				});
+
+				return res;
 			}
 
 		};
