@@ -17,6 +17,11 @@ cd larry-crawler/usage
 node get-tweets.js
 ```
 
+## Test
+```
+npm test
+```
+
 ## Output
 The application fetches tweets in batches of 100. Unless forcefully killed (CTRL+C), the app will keep running until all tweets matching the defined criteria have been fetched.
 See [result](https://github.com/duaraghav8/larry-crawler/blob/master/usage/result).
