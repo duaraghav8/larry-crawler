@@ -21,10 +21,57 @@ The application fetches tweets in batches of 100. Unless forcefully killed (CTRL
 See [result](https://github.com/duaraghav8/larry-crawler/blob/master/usage/result).
 
 
-https://dev.twitter.com/rest/public/timelines
+## Module API
+To access the class larry-crawler exposes for crawling twitter:
 
-https://dev.twitter.com/rest/reference/get/search/tweets
+```js
+const {TwitterCrawler} = require ('./larry-crawler');
+```
 
-https://dev.twitter.com/rest/public/search
+Get your app or user credentials from https://dev.twitter.com/, then create a new object like:
 
-https://dev.twitter.com/overview/api/twitter-ids-json-and-snowflake
+```js
+const crawler = new TwitterCrawler ({
+
+	consumerKey: process.env.TWITTER_CONSUMER_KEY,
+	consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
+	accessTokenKey: process.env.TWITTER_ACCESS_TOKEN_KEY,
+	accessTokenSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+
+});
+```
+If you have a twitter app, use ```bearerToken``` instead of ```accessTokenKey``` & ```accessTokenSecret```.
+
+The new object exposes method ```getTweets()``` to fetch tweets based on criteria and returns a ```Promise```.
+
+```js
+const criteria = { hashtags: ['custserv'], retweetCount: {$gt: 0} };
+
+crawler.getTweets (criteria).then ((response) => {
+  console.log (JSON.stringify (response, null, 2));
+}).catch (() => {});
+```
+
+To set the ```max_id``` parameter for pagination,
+```js
+criteria.maxIdString = status.id_str
+```
+where ```status``` is an item in the ```response.statuses``` Array.
+
+See [get-tweets.js](https://github.com/duaraghav8/larry-crawler/blob/master/usage/get-tweets.js) for a full example.
+
+
+
+## Technical Details
+
+The module has only 1 dependancy - [twitter](https://www.npmjs.com/package/twitter).
+
+1. Searching based on Hashtags is simple since Twitter API has in-built support for that. But in order to further refine tweets based on number of retweets, the module contains a class ```SecondaryFilterForTweets```.
+
+See [Working with search API](https://dev.twitter.com/rest/reference/get/search/tweets)
+
+2. Since a maximum of 100 tweeets are sent per request, an effective pagination strategy had to be implemented using the ```max_id``` parameter so we can retrieve ALL the tweets since the very beginning. [This strategy](https://dev.twitter.com/rest/public/timelines) was followed to achieve pagination.
+
+3. The primary challenge was to deal with the 64-bit integer ID provided by the Twitter API. JS can only provide precision upto 53 bits. Hence, the application uses ```id_str``` field at all times and a special decrement function has been written in ```usage/utils.js``` to operate on the string ID.
+
+See [Working with 64-bit id in Twitter](https://dev.twitter.com/overview/api/twitter-ids-json-and-snowflake)
