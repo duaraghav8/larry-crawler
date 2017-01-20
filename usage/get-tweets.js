@@ -20,7 +20,7 @@ const defaults = {
 	twitterAccessTokenSecret: 'bzJZhXrGTbAHf6gxz190jf1Sl7MywXYKs5uZQinzRatWY'
 };
 
-
+// If you have a Twitter app, replace accessTokenKey & accessTokenSecret with bearerToken
 const crawler = new TwitterCrawler ({
 
 	consumerKey: process.env.TWITTER_CONSUMER_KEY || defaults.twitterConsumerKey,
@@ -32,10 +32,16 @@ const crawler = new TwitterCrawler ({
 
 
 
+/**
+ * Self-calling function to immediately start the process of fetching tweets in batches.
+ * 1 batch contains a max of 100 tweets.
+ */
 (function fetchTweetBatch (maxIdString) {
 
+	// If hashtags array contains multiple strings, they're combined by OR operator in the api query
 	const criteria = { hashtags: ['custserv'], retweetCount: {$gt: 0} };
 
+	// Check if a max id was supplied to this function. If yes, add it to criteria
 	if (maxIdString) {
 		criteria.maxIdString = maxIdString;
 	}

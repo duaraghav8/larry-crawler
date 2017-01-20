@@ -4,6 +4,11 @@ const Twitter = require ('twitter'), {SecondaryFilterForTweets} = require ('./se
 
 class TwitterCrawler {
 
+	/**
+ 	 * Create a twitter object initialized with given credentials. Do NOT perform any requests here.
+ 	 *
+ 	 * @param {Object} credentials - Twitter App / User account auth tokens
+ 	 */
 	constructor (credentials) {
 		if (
 			!credentials || credentials.constructor.name !== 'Object' ||
@@ -49,6 +54,13 @@ class TwitterCrawler {
 
 
 	// Private Methods
+
+	/**
+ 	 * Translate the criteria supplied by user into the query params expected by Twitter API
+ 	 *
+ 	 * @param {Object} criteria
+ 	 * @param {String} maxIdString - Optional - the max_id param in api request is set if this value exists
+ 	 */
 	_constructParams (criteria, maxIdString) {
 		if (criteria.hashtags) {
 			const q = criteria.hashtags.reduce ((queryString, currentTag) => {
@@ -75,6 +87,14 @@ class TwitterCrawler {
 		throw TwitterCrawler._exceptInvalidCriteria ();
 	}
 
+
+	/**
+ 	 * Check if a user criteria is requesting a secondary filter, i.e, filter not supported by Twitter API.
+ 	 * In our case, secondary filter is retweet_count > 0.
+ 	 * Return true if sec. filter is required, false otherwise.
+ 	 *
+ 	 * @param {Object} criteria
+ 	 */
 	_responseRequiresSecondaryFiltering (criteria) {
 		return (
 			criteria.retweetCount && criteria.retweetCount.constructor.name === 'Object' &&
@@ -84,9 +104,13 @@ class TwitterCrawler {
 
 
 
+	// Public methods
+
 	/**
-	 * Public methods
-	 */
+ 	 * Function exposed via TwitterCrawler Object to fetch tweets based on criteria
+ 	 *
+ 	 * @param {Object} criteria
+ 	 */
 	getTweets (criteria) {
 		if (!criteria || criteria.constructor.name !== 'Object' || !Object.keys (criteria).length) {
 			throw TwitterCrawler._exceptInvalidCriteria ();
@@ -102,6 +126,8 @@ class TwitterCrawler {
 
 		}
 		
+		// If request doesn't require secondary filtering, simply make a request to Twitter
+		// and return API response as result
 		return this.twitterBot.get (
 			TwitterCrawler.PATH_SEARCH_TWEETS, this._constructParams (criteria, criteria.maxIdString)
 		);
