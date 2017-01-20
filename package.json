@@ -1,6 +1,6 @@
 {
   "name": "larry-crawler",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A simple yet flexible Twitter Crawler for Kayako Twitter Challenge",
   "main": "index.js",
   "scripts": {
