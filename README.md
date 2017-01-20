@@ -1,6 +1,7 @@
-# This README is a work in progress
-
 # larry-crawler
+
+[![Build Status](https://travis-ci.org/duaraghav8/larry-crawler.svg?branch=master)](https://travis-ci.org/duaraghav8/larry-crawler)
+
 Kayako Twitter challenge
 
 ## Installation
