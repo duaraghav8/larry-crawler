@@ -35,7 +35,6 @@ const crawler = new TwitterCrawler ({
 (function fetchTweetBatch (maxIdString) {
 
 	const criteria = { hashtags: ['custserv'], retweetCount: {$gt: 0} };
-	//const criteria = { hashtags: ['custserv'] };
 
 	if (maxIdString) {
 		criteria.maxIdString = maxIdString;

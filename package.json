@@ -4,7 +4,7 @@
   "description": "A simple yet flexible Twitter Crawler for Kayako Twitter Challenge",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha ./tests/* --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/duaraghav8/larry-crawler#readme",
   "dependencies": {
+    "mocha": "^3.2.0",
+    "should": "^11.1.2",
     "twitter": "^1.7.0"
   }
 }
