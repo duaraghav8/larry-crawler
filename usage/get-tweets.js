@@ -46,7 +46,12 @@ const crawler = new TwitterCrawler ({
 		console.log (`Retrieved a total of ${tweetCount} tweets.`);
 
 		response.statuses.forEach ((status) => {
-			console.log (/*status.text + ' by ' + status.user.name,*/ status.id_str, status.retweet_count);
+			console.log ('********************************************************************************');
+			console.log (
+				'"' + status.text + '" by ' + status.user.name + '\n' +
+				'ID: ' + status.id_str + '\nRetweet Count: ' + status.retweet_count
+			);
+			console.log ('********************************************************************************');
 		});
 
 		delete response.statuses;	// Free memory resources before moving to next batch of tweets
