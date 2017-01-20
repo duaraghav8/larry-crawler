@@ -1,124 +1,362 @@
-100
+***************************************************************************************************
+***************************************************************************************************
+* I LET THE SCRIPT RUN FOR ABOUT 7 SECONDS, THEN FORCE-KILLED IT. BELOW ARE THE RESULTS.
+* IF YOU WANT ALL THE TWEETS FROM THE BEGINNING WITHDEFINED CRITERIA, JUST LET THE SCRIPT RUN AND 
+* CLOSE ON ITS OWN.
+***************************************************************************************************
+***************************************************************************************************
 
 
-{
-  "created_at": "Wed Jan 18 14:30:27 +0000 2017",
-  "id": 821726450164387800,
-  "id_str": "821726450164387840",
-  "text": "Call center quality assurance – 15 best practices to boost customer service https://t.co/rs3qzXWI2r #custserv… https://t.co/7EjGP6avmE",
-  "truncated": true,
-  "entities": {
-    "hashtags": [
-      {
-        "text": "custserv",
-        "indices": [
-          100,
-          109
-        ]
-      }
-    ],
-    "symbols": [],
-    "user_mentions": [],
-    "urls": [
-      {
-        "url": "https://t.co/rs3qzXWI2r",
-        "expanded_url": "http://buff.ly/2e1sPK5",
-        "display_url": "buff.ly/2e1sPK5",
-        "indices": [
-          76,
-          99
-        ]
-      },
-      {
-        "url": "https://t.co/7EjGP6avmE",
-        "expanded_url": "https://twitter.com/i/web/status/821726450164387840",
-        "display_url": "twitter.com/i/web/status/8…",
-        "indices": [
-          111,
-          134
-        ]
-      }
-    ]
-  },
-  "metadata": {
-    "iso_language_code": "en",
-    "result_type": "recent"
-  },
-  "source": "<a href=\"http://bufferapp.com\" rel=\"nofollow\">Buffer</a>",
-  "in_reply_to_status_id": null,
-  "in_reply_to_status_id_str": null,
-  "in_reply_to_user_id": null,
-  "in_reply_to_user_id_str": null,
-  "in_reply_to_screen_name": null,
-  "user": {
-    "id": 186401696,
-    "id_str": "186401696",
-    "name": "Miruna Mitranescu⚡️",
-    "screen_name": "anamiruna",
-    "location": "Paris",
-    "description": "Head of Content Marketing @Aircall - ex @Lewagonparis, @TastersClub, @RudeBaguette #philosophy lover",
-    "url": "https://t.co/W6AVuXqHdH",
-    "entities": {
-      "url": {
-        "urls": [
-          {
-            "url": "https://t.co/W6AVuXqHdH",
-            "expanded_url": "http://bit.ly/appaircall",
-            "display_url": "bit.ly/appaircall",
-            "indices": [
-              0,
-              23
-            ]
-          }
-        ]
-      },
-      "description": {
-        "urls": []
-      }
-    },
-    "protected": false,
-    "followers_count": 769,
-    "friends_count": 984,
-    "listed_count": 261,
-    "created_at": "Fri Sep 03 11:02:00 +0000 2010",
-    "favourites_count": 1293,
-    "utc_offset": 7200,
-    "time_zone": "Athens",
-    "geo_enabled": true,
-    "verified": false,
-    "statuses_count": 1983,
-    "lang": "fr",
-    "contributors_enabled": false,
-    "is_translator": false,
-    "is_translation_enabled": false,
-    "profile_background_color": "C0DEED",
-    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/509576187/moi.jpg",
-    "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/509576187/moi.jpg",
-    "profile_background_tile": true,
-    "profile_image_url": "http://pbs.twimg.com/profile_images/2528774844/coukofqcjj8ogep7ey3d_normal.jpeg",
-    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2528774844/coukofqcjj8ogep7ey3d_normal.jpeg",
-    "profile_link_color": "0084B4",
-    "profile_sidebar_border_color": "C0DEED",
-    "profile_sidebar_fill_color": "DDEEF6",
-    "profile_text_color": "333333",
-    "profile_use_background_image": true,
-    "has_extended_profile": false,
-    "default_profile": false,
-    "default_profile_image": false,
-    "following": false,
-    "follow_request_sent": false,
-    "notifications": false,
-    "translator_type": "none"
-  },
-  "geo": null,
-  "coordinates": null,
-  "place": null,
-  "contributors": null,
-  "is_quote_status": false,
-  "retweet_count": 0,
-  "favorite_count": 0,
-  "favorited": false,
-  "retweeted": false,
-  "possibly_sensitive": false,
-  "lang": "en"
-}
+
+
+
+Retrieved a total of 39 tweets in this batch.
+*******************************************************
+"RT @ascensos: The results of our #TuesdayPoll prove the value of good #CustomerService! #cctr #custserv https://t.co/Bs4NLD2dYO" by West Dunbartonshire
+ID: 822383035353968642
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @Brand_Embassy: Why technology should play a key role in customer service in 2017. https://t.co/HOFBGZDthE #SocialCustCare #CustServ" by Mohamed Bhimji
+ID: 822381130150248448
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @rostrvm: Helpful article from @callcentrehelp "Top 10 Tips for Exceeding Customer Expectations" https://t.co/OGVGBZGfJh #custserv #CX" by Vijay Bajaj
+ID: 822381031139508224
+Retweet Count: 5
+*******************************************************
+*******************************************************
+"Why technology should play a key role in customer service in 2017. https://t.co/HOFBGZDthE #SocialCustCare #CustServ" by Brand Embassy
+ID: 822380396989906949
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @rostrvm: Helpful article from @callcentrehelp "Top 10 Tips for Exceeding Customer Expectations" https://t.co/OGVGBZGfJh #custserv #CX" by higuru
+ID: 822378574422376448
+Retweet Count: 5
+*******************************************************
+*******************************************************
+"RT @Socialfave: RT @MarshaCollier: "#CX is "proactive" - #Custserv is "reactive". ✔ Romance your customer!" V/https://t.co/XVFNH6SmFh #Grow…" by John Moyer
+ID: 822378383686307841
+Retweet Count: 150
+*******************************************************
+*******************************************************
+"RT @Socialfave: RT @MarshaCollier: "#CX is "proactive" - #Custserv is "reactive". ✔ Romance your customer!" V/https://t.co/XVFNH6SmFh #Grow…" by Kierstin Fox
+ID: 822378046900424707
+Retweet Count: 150
+*******************************************************
+*******************************************************
+"RT @Socialfave: RT @MarshaCollier: "#CX is "proactive" - #Custserv is "reactive". ✔ Romance your customer!" V/https://t.co/XVFNH6SmFh #Grow…" by mark pacaro
+ID: 822377892097224704
+Retweet Count: 150
+*******************************************************
+*******************************************************
+"RT @Socialfave: RT @MarshaCollier: "#CX is "proactive" - #Custserv is "reactive". ✔ Romance your customer!" V/https://t.co/XVFNH6SmFh #Grow…" by Chelsea Hancock M
+ID: 822376734783700993
+Retweet Count: 150
+*******************************************************
+*******************************************************
+"RT @sysaid: "Consistency is the most important element of customer service" – @RoyAtkinson #ITSM #CustServ" by Julia Sophie Lewis
+ID: 822376396316086272
+Retweet Count: 7
+*******************************************************
+*******************************************************
+"RT @Socialfave: RT @MarshaCollier: "#CX is "proactive" - #Custserv is "reactive". ✔ Romance your customer!" V/https://t.co/XVFNH6SmFh #Grow…" by Karla-Karina
+ID: 822376192020021248
+Retweet Count: 150
+*******************************************************
+*******************************************************
+"RT @Socialfave: RT @MarshaCollier: "#CX is "proactive" - #Custserv is "reactive". ✔ Romance your customer!" V/https://t.co/XVFNH6SmFh #Grow…" by I love Essie
+ID: 822376059849109504
+Retweet Count: 150
+*******************************************************
+*******************************************************
+"RT @rostrvm: Helpful article from @callcentrehelp "Top 10 Tips for Exceeding Customer Expectations" https://t.co/OGVGBZGfJh #custserv #CX" by Call Centre Helper
+ID: 822375270178951169
+Retweet Count: 5
+*******************************************************
+*******************************************************
+"RT @Socialfave: RT @MarshaCollier: "#CX is "proactive" - #Custserv is "reactive". ✔ Romance your customer!" V/https://t.co/XVFNH6SmFh #Grow…" by Social Fave
+ID: 822373852739031042
+Retweet Count: 150
+*******************************************************
+*******************************************************
+"RT @ehjongsma: The latest Managed Print Services Journal! https://t.co/zcfh2vmBw7 Thanks to @Quocirca @NewFieldIT @Your_MPSA #custserv #ai" by Elly Langeveld
+ID: 822373090743054337
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @rostrvm: Helpful article from @callcentrehelp "Top 10 Tips for Exceeding Customer Expectations" https://t.co/OGVGBZGfJh #custserv #CX" by rostrvm 4 Housing
+ID: 822372912195719168
+Retweet Count: 5
+*******************************************************
+*******************************************************
+"RT @rostrvm: Helpful article from @callcentrehelp "Top 10 Tips for Exceeding Customer Expectations" https://t.co/OGVGBZGfJh #custserv #CX" by Poweredbyrostrvm
+ID: 822372647459639298
+Retweet Count: 5
+*******************************************************
+*******************************************************
+"Helpful article from @callcentrehelp "Top 10 Tips for Exceeding Customer Expectations" https://t.co/OGVGBZGfJh #custserv #CX" by Rostrvm Solutions
+ID: 822371885765644289
+Retweet Count: 5
+*******************************************************
+*******************************************************
+"RT @conorp: As a support professional, how do you make sure you get the customer support you need? https://t.co/h1iJhP5RcD #custserv https:…" by Supported Content
+ID: 822371218497994752
+Retweet Count: 4
+*******************************************************
+*******************************************************
+"RT @NewVoiceMedia: Seven Ways to Do Proactive Customer Service Without Being Intrusive https://t.co/HNxYvtE7Ia #custserv #cx" by Harald Henn
+ID: 822369336224419841
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"Seven Ways to Do Proactive Customer Service Without Being Intrusive https://t.co/HNxYvtE7Ia #custserv #cx" by NewVoiceMedia
+ID: 822368373308854272
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @Brand_Embassy: Cómo apelar a las emociones de tus clientes https://t.co/6zZjucnJJy #CustServ" by Mohamed Bhimji
+ID: 822365970924769280
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @djdoug: So you think nice in business is for suckers? Think again. If so let me be rich in my vacuum. https://t.co/GPjo09ukTe #custserv" by Mohamed Bhimji
+ID: 822365967141441536
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @MarshaCollier: #CustServ :: How can technology — help maintain relationships with your customers? #storify via @ImMarkBernhardt https:/…" by Prabhakar Azad
+ID: 822364863036952576
+Retweet Count: 11
+*******************************************************
+*******************************************************
+"RT @johnrpatt: Today’s customers expected to be treated as very valuable assets. @ChipRBell #CustServ https://t.co/RhSWn2wC1I" by Julia Sophie Lewis
+ID: 822362805412184065
+Retweet Count: 5
+*******************************************************
+*******************************************************
+"The latest Managed Print Services Journal! https://t.co/zcfh2vmBw7 Thanks to @Quocirca @NewFieldIT @Your_MPSA #custserv #ai" by edwin jongsma
+ID: 822362128027791364
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @Rep_Warn: A man without a smiling face must not open a shop.
+
+https://t.co/6Lkopqf6YF
+
+#repwarn #reputationmanagement #custserv #custex…" by Affiliate Central
+ID: 822361412018184192
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"Thank you for the RT @VGSresources: Empowering Employees: One Way to Excel at Customer Service by @britter https://t.co/CWARMBf1i3 #custserv" by Bill Quiseng
+ID: 822360638563434496
+Retweet Count: 2
+*******************************************************
+*******************************************************
+"A man without a smiling face must not open a shop.
+
+https://t.co/6Lkopqf6YF
+
+#repwarn #reputationmanagement… https://t.co/X48AzKWpRV" by RepWarn
+ID: 822359868627709953
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @FedExOfficeJobs: Can you recommend anyone for this #job? Retail Customer Service Associate - https://t.co/HUrSCj6S1u #InStore #CustServ…" by Top Tweet Filter
+ID: 822357073816068096
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"Cómo apelar a las emociones de tus clientes https://t.co/6zZjucnJJy #CustServ" by Brand Embassy
+ID: 822355232130793472
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @djdoug: Help your customers LOVE you. They will stay with you forever regardless of your price. https://t.co/GPjo09ukTe #custserv https…" by Julia Sophie Lewis
+ID: 822355229261828096
+Retweet Count: 2
+*******************************************************
+*******************************************************
+"RT @hellopetercom: #FridayFeeling Happy Friday Folks! May you have a Service Filled Weekend. Share your #custserv experiences on https://t.…" by TN!CE
+ID: 822355041910722560
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"So you think nice in business is for suckers? Think again. If so let me be rich in my vacuum. https://t.co/GPjo09ukTe #custserv" by Doug Sandler
+ID: 822353181124476928
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @IWantItNowblog: 3 tips you can learn from your competitors&gt;&gt;https://t.co/Qb8SHNHJye #custserv #customer" by James Sweeney
+ID: 822353130851471360
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"Can you recommend anyone for this #job? Retail Customer Service Associate - https://t.co/HUrSCj6S1u #InStore #CustServ #Collierville, TN" by FedEx Office Jobs
+ID: 822352558463164416
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @CXpert: Ten #CustomerService And #CustomerExperience Trends For 2017 https://t.co/8BvYy8Nawd - @Hyken #CustServ #custexp" by Julia Sophie Lewis
+ID: 822344565499789312
+Retweet Count: 3
+*******************************************************
+*******************************************************
+"Interested in a #job in #Berkeley, CA? This could be a great fit: https://t.co/hSctCncUax #InStore #CustServ #Retail #Hiring" by FedEx Office Jobs
+ID: 822342273882996737
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @Timothy_Hughes: The Growing Importance Of Marketing Experiences https://t.co/1KuzzlSrFn @janlgordon #custexp #custserv #socialselling" by Camilla Feddersen
+ID: 822339460759224321
+Retweet Count: 20
+*******************************************************
+Retrieved a total of 29 tweets in this batch.
+*******************************************************
+"RT @BeyondMorale: "The power of emotional and empathy in service is huge." Diane Oreck -NetJets @ccw_digital #ccww #custserv" by Jennifer Maldonado
+ID: 822333705695862784
+Retweet Count: 2
+*******************************************************
+*******************************************************
+"RT @toister: Excellent, eye-opening list. Well done, @jtwatkin &amp; thanks for the mention. #custserv https://t.co/A99hMDkfbc" by Jeremy Watkin
+ID: 822333183127494656
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @CXpert: Customer Relationship Management (#CRM) Done Right https://t.co/dVDDRcEdBs - @jtwatkin #custserv" by Jeremy Watkin
+ID: 822333075900116992
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"3 tips you can learn from your competitors&gt;&gt;https://t.co/Qb8SHNHJye #custserv #customer" by I Want it Now
+ID: 822331076240510976
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @JoinRelate: Your customers want live chat. Here's why it's time to listen. https://t.co/J4bnbcpuSA #custserv https://t.co/H1mzh96nul" by Sandie Overtveld
+ID: 822324626134941696
+Retweet Count: 2
+*******************************************************
+*******************************************************
+"RT @79KerrIT: See how @Agoda shifted their #custserv from chaos to agility with @Zendesk. https://t.co/w1H7Lcsngk" by Sandie Overtveld
+ID: 822324469737738243
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @Zendesk: Creating unforgettable customer experiences by the cup. That’s the @Starbucks way. https://t.co/Ta7sFb8WNn #custserv https://t…" by Stephane Calimodio
+ID: 822323555853475845
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @conorp: As a support professional, how do you make sure you get the customer support you need? https://t.co/h1iJhP5RcD #custserv https:…" by Sukh Anand
+ID: 822311975724072960
+Retweet Count: 4
+*******************************************************
+*******************************************************
+"RT @jtwatkin: #CustomerService Tip of the Week: Tell the truth: https://t.co/mlzY7hfh5H via @toister #custserv" by Ben Motteram 🇦🇺
+ID: 822307420705734657
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"Creating unforgettable customer experiences by the cup. That’s the @Starbucks way. https://t.co/Ta7sFb8WNn #custserv https://t.co/CZdqJBoXHu" by Zendesk
+ID: 822304901673861122
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @johnrpatt: Today’s customers expected to be treated as very valuable assets. @ChipRBell #CustServ https://t.co/RhSWn2wC1I" by Abhas Agnihotri
+ID: 822302810905583619
+Retweet Count: 5
+*******************************************************
+*******************************************************
+"RT @NextLevelSup: Good to know... #teamnls #business #tech #custserv #network #IT #smallbiz #keyboard #functionkeys https://t.co/uqLtyq0cbC" by StartUpNews
+ID: 822294993700274176
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"Good to know... #teamnls #business #tech #custserv #network #IT #smallbiz #keyboard #functionkeys https://t.co/uqLtyq0cbC" by Next Level Support
+ID: 822294250146537476
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @billquiseng: Customer success is the key to business growth via @retexperience https://t.co/04uIgnepug #cx #custserv" by Mohamed Bhimji
+ID: 822290171156660224
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @MarshaCollier: RT @GregOrtbach: Q4: How will the “big stories” of 2016 affect customer service in 2017? #custserv" by ind
+ID: 822289816129769472
+Retweet Count: 2
+*******************************************************
+*******************************************************
+"RT @Genesys: Find out if your #IVR is helping your business or driving your customers away in 5 mins! https://t.co/aKoLUrvbuk #CustServ htt…" by Velusamy
+ID: 822289155904262144
+Retweet Count: 2
+*******************************************************
+*******************************************************
+"RT @tagove_: How to deliver excellent customer service.  https://t.co/cYMvK2noSJ by @sawarams via @StartupGrind #CustServ https://t.co/FreW…" by opoLLoqo.com, Inc.
+ID: 822288989616885760
+Retweet Count: 6
+*******************************************************
+*******************************************************
+"#FridayFeeling Happy Friday Folks! May you have a Service Filled Weekend. Share your #custserv experiences on… https://t.co/iMgiroPIwc" by Hellopeter.com
+ID: 822285958062211072
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @CTrappe: "Not all our #custserv experiences are positive. It's life." - @ctrappe https://t.co/ZUdEHtAkir #socialmedia" by S Kean
+ID: 822285091816800256
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"Thank yiuo for the RT @biggist: 25 Worst #CustomerService Mistakes and What They Cost You via @helpracing https://t.co/fZ8h4TNcj3 #custserv" by Bill Quiseng
+ID: 822285054391029761
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @SmallBizResCafe: How Do You Keep Your Customers Happy? https://t.co/KhQi2XfyWu #CustServ #CustExp #Entrepreneur #SmallBusiness" by Michael Lemm
+ID: 822284757824368641
+Retweet Count: 2
+*******************************************************
+*******************************************************
+"RT @meetenb: Meet @OracleServCloud customer hero, learn what #custserv challenges @MazdaUSA faces deploying #OSvC solution https://t.co/qxd…" by James Lacouture
+ID: 822282933683757056
+Retweet Count: 4
+*******************************************************
+*******************************************************
+"RT @interactionsco: How machine learning is ushering in a new age of customer service https://t.co/yofSgMRPGO #custserv" by K e v v }
+ID: 822281903407558656
+Retweet Count: 5
+*******************************************************
+*******************************************************
+"RT @a_athayde: How Texting (Messaging) Is Transforming Customer Service via @forbes by @micahsolomon #custserv #serviceclient https://t.co/…" by Jacques Le Conte
+ID: 822278804466974721
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"Customer success is the key to business growth via @retexperience https://t.co/04uIgnepug #cx #custserv" by Bill Quiseng
+ID: 822277554602213376
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @KateNasser: Never allow a person to tell you know who doesn't have the power to say yes. ~Eleanor Roosevelt #quotes #sales #custserv #s…" by onang_pribadi
+ID: 822275669509816320
+Retweet Count: 1
+*******************************************************
+*******************************************************
+"RT @djdoug: Help your customers LOVE you. They will stay with you forever regardless of your price. https://t.co/GPjo09ukTe #custserv https…" by Mohamed Bhimji
+ID: 822275009234272256
+Retweet Count: 2
+*******************************************************
+*******************************************************
+"RT @billquiseng: Empowering Employees: One Way to Excel at Customer Service by @britter https://t.co/CWARMBf1i3 #custserv" by Mohamed Bhimji
+ID: 822275008781283328
+Retweet Count: 2
+*******************************************************
+*******************************************************
+""Not all our #custserv experiences are positive. It's life." - @ctrappe https://t.co/ZUdEHtAkir #socialmedia" by Christoph Trappe
+ID: 822274100508946432
+Retweet Count: 1
+*******************************************************

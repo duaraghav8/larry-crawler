@@ -44,7 +44,7 @@ class TwitterCrawler {
 	}
 
 	// Static Constants
-	static get TWEET_COUNT_PER_CALL () { return 11; } /*************************************************/
+	static get TWEET_COUNT_PER_CALL () { return 100; }
 	static get PATH_SEARCH_TWEETS () { return 'search/tweets'; }
 
 
