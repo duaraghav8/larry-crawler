@@ -1,6 +1,6 @@
 'use strict';
 
-exports.decreaseBigInteger = (bigInt) => {
+exports.decrementBigInteger = (bigInt) => {
 	if (typeof bigInt !== 'string') {
 		throw new Error ('Invalid argument');
 	}

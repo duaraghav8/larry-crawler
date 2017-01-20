@@ -10,8 +10,8 @@
 
 'use strict';
 
-const TwitterCrawler = require ('../index'),
-	{decreaseBigInteger} = require ('./utils');
+const TwitterCrawler = require ('../src/index'),
+	{decrementBigInteger} = require ('./utils');
 
 const defaults = {
 	twitterConsumerKey: 'nWijRASOdKeA3OR8w0gIixZih',
@@ -54,7 +54,7 @@ const crawler = new TwitterCrawler ({
 		// Keep recursing until we stop getting tweets.
 		if (tweetCount > 0) {
 			// Recursively call the function to fetch more tweets at a lower page
-			fetchTweetBatch (decreaseBigInteger (response.statuses.slice (-1) [0].id_str));
+			fetchTweetBatch (decrementBigInteger (response.statuses.slice (-1) [0].id_str));
 		}
 
 	}).catch ((error) => {
