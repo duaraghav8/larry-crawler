@@ -20,6 +20,9 @@ node get-tweets.js
 The application fetches tweets in batches of 100. Unless forcefully killed (CTRL+C), the app will keep running until all tweets matching the defined criteria have been fetched.
 See [result](https://github.com/duaraghav8/larry-crawler/blob/master/usage/result).
 
+NOTE: A batch might produce less than 100 tweets in output if you've applied a secondary filter (like retweetCounts).
+If 100 tweets were retrieved based on specified HashTag and 30 of them haven't been retweeted, then only 70 tweets are supplied in the ```response.statuses``` Array.
+
 
 ## Module API
 To access the class larry-crawler exposes for crawling twitter:
@@ -70,8 +73,8 @@ The module has only 1 dependancy - [twitter](https://www.npmjs.com/package/twitt
 
 See [Working with search API](https://dev.twitter.com/rest/reference/get/search/tweets)
 
-2. Since a maximum of 100 tweeets are sent per request, an effective pagination strategy had to be implemented using the ```max_id``` parameter so we can retrieve ALL the tweets since the very beginning. [This strategy](https://dev.twitter.com/rest/public/timelines) was followed to achieve pagination.
+1. Since a maximum of 100 tweeets are sent per request, an effective pagination strategy had to be implemented using the ```max_id``` parameter so we can retrieve ALL the tweets since the very beginning. [This strategy](https://dev.twitter.com/rest/public/timelines) was followed to achieve pagination.
 
-3. The primary challenge was to deal with the 64-bit integer ID provided by the Twitter API. JS can only provide precision upto 53 bits. Hence, the application uses ```id_str``` field at all times and a special decrement function has been written in ```usage/utils.js``` to operate on the string ID.
+2. The primary challenge was to deal with the 64-bit integer ID provided by the Twitter API. JS can only provide precision upto 53 bits. Hence, the application uses ```id_str``` field at all times and a special decrement function has been written in ```usage/utils.js``` to operate on the string ID.
 
 See [Working with 64-bit id in Twitter](https://dev.twitter.com/overview/api/twitter-ids-json-and-snowflake)

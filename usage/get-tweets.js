@@ -35,6 +35,7 @@ const crawler = new TwitterCrawler ({
 (function fetchTweetBatch (maxIdString) {
 
 	const criteria = { hashtags: ['custserv'], retweetCount: {$gt: 0} };
+	//const criteria = { hashtags: ['custserv'] };
 
 	if (maxIdString) {
 		criteria.maxIdString = maxIdString;
@@ -43,18 +44,16 @@ const crawler = new TwitterCrawler ({
 	crawler.getTweets (criteria).then ((response) => {
 		const tweetCount = response.statuses.length;
 
-		console.log (`Retrieved a total of ${tweetCount} tweets.`);
+		console.log (`Retrieved a total of ${tweetCount} tweets in this batch.`);
 
 		response.statuses.forEach ((status) => {
-			console.log ('********************************************************************************');
+			console.log ('*******************************************************');
 			console.log (
 				'"' + status.text + '" by ' + status.user.name + '\n' +
 				'ID: ' + status.id_str + '\nRetweet Count: ' + status.retweet_count
 			);
-			console.log ('********************************************************************************');
+			console.log ('*******************************************************');
 		});
-
-		delete response.statuses;	// Free memory resources before moving to next batch of tweets
 
 		// Keep recursing until we stop getting tweets.
 		if (tweetCount > 0) {
@@ -63,7 +62,7 @@ const crawler = new TwitterCrawler ({
 		}
 
 	}).catch ((error) => {
-		console.err (
+		console.error (
 			'An error occured while fetching the tweets:\n\n' + JSON.stringify (error, null, 2)
 		);
 	});
