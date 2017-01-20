@@ -44,12 +44,12 @@ class TwitterCrawler {
 	}
 
 	// Static Constants
-	static get TWEET_COUNT_PER_CALL () { return 11; } /*****************************/
+	static get TWEET_COUNT_PER_CALL () { return 11; } /*************************************************/
 	static get PATH_SEARCH_TWEETS () { return 'search/tweets'; }
 
 
 	// Private Methods
-	_constructParams (criteria, maxId) {
+	_constructParams (criteria, maxIdString) {
 		if (criteria.hashtags) {
 			const q = criteria.hashtags.reduce ((queryString, currentTag) => {
 				if (currentTag [0] != '#') {
@@ -61,12 +61,12 @@ class TwitterCrawler {
 
 			const params = { q, count: TwitterCrawler.TWEET_COUNT_PER_CALL };
 
-			if (maxId) {
-				if (maxId.constructor.name !== 'Number') {
+			if (maxIdString) {
+				if (typeof maxIdString !== 'string') {
 					throw TwitterCrawler._exceptInvalidMaxId ();
 				}
 
-				params.max_id = maxId;
+				params.max_id = maxIdString;
 			}
 
 			return params;
@@ -96,14 +96,14 @@ class TwitterCrawler {
 
 			return new SecondaryFilterForTweets (
 				this.twitterBot.get (
-					TwitterCrawler.PATH_SEARCH_TWEETS, this._constructParams (criteria, criteria.maxId)
+					TwitterCrawler.PATH_SEARCH_TWEETS, this._constructParams (criteria, criteria.maxIdString)
 				), criteria
 			).filter ();
 
 		}
 		
 		return this.twitterBot.get (
-			TwitterCrawler.PATH_SEARCH_TWEETS, this._constructParams (criteria, criteria.maxId)
+			TwitterCrawler.PATH_SEARCH_TWEETS, this._constructParams (criteria, criteria.maxIdString)
 		);
 	}
 
